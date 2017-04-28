@@ -1,0 +1,179 @@
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  line-height: 1.35
+  font:
+    weight: 300
+    family: 'Roboto', sans-serif
+
+body, p
+  color: #424242
+ 
+h1, h2, h3, h4, h5, h6
+  color: #212121
+  text-align: center
+  
+.business
+  background: #f44336
+.entertainment
+  background: #E91E63
+.gaming
+  background: #9C27B0
+.general
+  background: #673AB7
+.music
+  background: #3F51B5
+.science-and-nature
+  background: #2196F3
+.sport
+  background: #00BCD4
+.technology
+  background: #009688
+  
+.ion
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 2.5em
+  text-shadow: 1px 1px rgba(0,0,0,0.66)
+  color: #4CAF50
+  
+.news-sources
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  
+  .news-source
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-transform: capitalize
+    border: 1px solid white
+    width: calc(25% - 0.66em)
+    height: 25vw
+    cursor: pointer
+    background:
+      size: contain
+      position: center
+      repeat: no-repeat
+    .ion
+      font-size: 15vmin
+      
+
+
+.news-categories
+  display: flex
+  flex-wrap: wrap
+  .news-category
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-transform: capitalize
+    border: 1px solid white
+    text-shadow: 1px 1px rgba(0,0,0,0.33)
+    color: white
+    width: 25%
+    height: 3em
+    cursor: pointer
+    &.active
+      background: green
+    
+.news-feed
+  padding: 0.33em
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  &__article
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 0 auto
+    text-decoration: none
+    border-radius: 2px
+    padding: 0.66em
+    margin: 0.5em
+    max-width: 60ch
+     
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+
+    &:hover 
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    
+    > * + *
+      margin: 0.66em auto 0 auto
+    &__title
+      text-align: center
+    &__image
+      width: 100%
+      height: auto
+      display: block
+    &__description
+      max-width: 60ch
+    &__url
+      display: block
+      border: none
+      background: none
+      border-radius: 2px
+      width: 11ch
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+
+      &:hover 
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    &__author
+      color: #616161
+      text-align: right
+  
+    
+
+
+body
+  /* ===== == = === Base Styles === = == ===== */
+  font-size: 11px
+  .news-feed__article
+    width: calc(100% - 1rem)
+
+  /* ===== == = === 20em (320px) === = == ===== */
+  @media (min-width : 20rem)
+    font-size: 12px
+      
+  /* ===== == = === 30em (480px) === = == ===== */
+  @media (min-width : 30rem)
+    font-size: 13px
+    .news-feed__article
+      width: calc(50% - 1em)
+      
+  /* ===== == = === 37.5em (600px) === = == ===== */
+  @media (min-width: 37.5rem)
+    font-size: 13.75px
+
+
+  /* ===== == = === 48em (768px) === = == ===== */
+  @media (min-width : 48rem)
+    font-size: 14.8px
+    .news-feed__article
+      width: calc(25% - 1em)
+  /* ===== == = === 62.25em (992px) === = == ===== */
+  @media (min-width : 62em)
+    font-size: 16.2px
+
+
+  /* ===== == = === 68.75em (1100px) === = == ===== */
+  @media (min-width : 68.75rem)
+    font-size: 16.875px
+    .news-feed__article
+      width: calc(20% - 1em)
+
+  /* ===== == = === 81.25em (1300px) === = == ===== */
+  @media (min-width : 81.25rem)
+    font-size: 18.125px
+    
+    
+    
+
